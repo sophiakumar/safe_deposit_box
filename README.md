@@ -7,6 +7,7 @@ This Desktop application helps users save files in encrypted format at their loc
 
 ## Prerequisites
 1. Python >=3.6
+2. If facing problem in OpenCV VideoCapture use command 
 
 ## Other Requirements
 For Windows users cmake should be installed from Visual Studio Installer for `face_recognition` module to work.
