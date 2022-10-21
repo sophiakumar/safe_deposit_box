@@ -27,17 +27,6 @@ def captureFace(ent):
     return True
 
 
-def captureFace(ent):
-    filename = os.getcwd()+'\\temp\\test_img.png'
-    # messagebox.showinfo(
-    #     'SUCCESS!!!', 'Press Space Bar to click picture and ESC to exit')
-    res = None
-    res = messagebox.askquestion(
-        'Click Picture', 'Press Space Bar to click picture and ESC to exit')
-    if res == 'yes':
-        capture_image_from_cam_into_temp()
-        ent.insert(tk.END, filename)
-    return True
 
 
 def browsefunc(ent):
@@ -55,7 +44,7 @@ def login_frame(destroy_this_win=None):
 
     empty_temp_folder()
     root = tk.Tk()
-    root.title("Safe Deposit Box:Login")
+    root.title("Safe Deposit Box : Login")
     root.geometry("500x700")  # 300x200
 
     uname_label = tk.Label(root, text="Username:", font=10)
@@ -105,7 +94,7 @@ def register_frame(destroy_this_win=None):
 
     empty_temp_folder()
     root = tk.Tk()
-    root.title("Safe Deposit Box:Register")
+    root.title("Safe Deposit Box : Register")
     root.geometry("500x700")  # 300x200
 
     uname_label = tk.Label(root, text="Username:", font=10)

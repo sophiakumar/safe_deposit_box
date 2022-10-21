@@ -5,9 +5,9 @@ from file_crypto import *
 
 
 def generateHash(rawString):
-    md51 = hashlib.md5()
+    md51 = hashlib.md5() #md5 hash :returns 128 bit hash value
     md51.update(rawString.encode('utf-8'))
-    hash_1 = md51.hexdigest()
+    hash_1 = md51.hexdigest() #Returns the encoded data in hexadecimal format
     return hash_1
 
 
@@ -34,8 +34,8 @@ def authenticateUser(username, password):
     if(username not in getUsers()):
         return False
     else:
-        pass_hash = generateHash(password)
-        user_data = getUserData(username)
+        pass_hash = generateHash(password) #generated hash
+        user_data = getUserData(username)  
         true_pass = user_data[1]
         if(true_pass == pass_hash):
             return True
